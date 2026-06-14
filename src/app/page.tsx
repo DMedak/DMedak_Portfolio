@@ -10,19 +10,23 @@ import NowSection from "@/app/sections/NowSection";
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#070908] text-white">
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(163,230,53,0.12),transparent_30%),radial-gradient(circle_at_80%_10%,rgba(34,197,94,0.08),transparent_25%),linear-gradient(180deg,#0a0d0b_0%,#070908_45%,#020302_100%)]" />
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[linear-gradient(115deg,transparent_0%,transparent_42%,rgba(163,230,53,0.16)_43%,transparent_44%,transparent_100%)]" />
-
+    <>
       <NavBar />
-      <HeroSection />
-      <AboutSection />
-      <ProfileSection />
-      <TechStacksSection />
-      <WorkSection />
-      <JourneySection />
-      <NowSection />
-      <ContactSection />
-    </main>
+
+      <main className="h-[100dvh] overflow-y-scroll overscroll-contain snap-y snap-mandatory scroll-smooth bg-[#070908] text-white">
+        <div className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(circle_at_20%_20%,rgba(163,230,53,0.12),transparent_30%),radial-gradient(circle_at_80%_10%,rgba(34,197,94,0.08),transparent_25%),linear-gradient(180deg,#0a0d0b_0%,#070908_45%,#020302_100%)]" />
+
+        <div className="relative z-10">
+          <HeroSection />
+          <AboutSection />
+          <ProfileSection />
+          <TechStacksSection />
+          <WorkSection />
+          <JourneySection />
+          <NowSection />
+          <ContactSection />
+        </div>
+      </main>
+    </>
   );
 }
